@@ -8,13 +8,13 @@ let timeline = [];
 
 // timeline.push(irb);
 
-let general_instructions = {
-    type: 'html-button-response',
-    stimulus: `<div class="gen_ins"><p>In this experiment, you will hear recordings and will make decisions about them.<br><br>IMPORTANT: Please only accept this task if you are listening through headphones and working in a quiet environment.<br><br></p></div>`,
-    choices: ['Continue']
-};
+// let general_instructions = {
+//     type: 'html-button-response',
+//     stimulus: `<div class="gen_ins"><p>In this experiment, you will hear recordings and will make decisions about them.<br><br>IMPORTANT: Please only accept this task if you are listening through headphones and working in a quiet environment.<br><br></p></div>`,
+//     choices: ['Continue']
+// };
 
-timeline.push(general_instructions);
+// timeline.push(general_instructions);
 
 // let audio_check_instructions = {
 //     type: 'html-keyboard-response',
@@ -27,9 +27,9 @@ timeline.push(general_instructions);
 
 
 let instructions = {
-    type: 'html-keyboard-response',
-    stimulus: '<div class="spec_ins"><p>In this experiment, you will hear sound recordings of a series of musical chords, two at a time. In each pair, one chord is <em>in-tune</em> and one chord is <em>out-of-tune</em>. Your job is to decide which chord was <em>in-tune</em>.<br><br>If you think the first chord was in-tune, press the \'D\' key on your keyboard. If you think the second chord was in-tune, press the \'K\' key on your keyboard.<br><br>You can tell a chord is in-tune if it sounds comfortable, stable, and natural. Out-of-tune chords will sound less comfortable, like an old piano or a children\'s orchestra.<br><br>Make sure to listen carefully and proceed as quickly and accurately as you can. You must answer within 4 seconds, or the next chords will play automatically.<br><br>When you\'re ready to begin, press the space bar.</p></div>',
-    choices: ['space']
+    type: 'html-button-response',
+    stimulus: '<div class="spec_ins"><p>In this experiment, you will hear sound recordings of a series of musical chords, two at a time. In each pair, one chord is <em>in-tune</em> and one chord is <em>out-of-tune</em>. Your job is to decide which chord was <em>in-tune</em>.<br><br>If you think the first chord was in-tune, press the \'D\' key on your keyboard. If you think the second chord was in-tune, press the \'K\' key on your keyboard.<br><br>You can tell a chord is in-tune if it sounds comfortable, stable, and natural. Out-of-tune chords will sound less comfortable, like an old piano or a children\'s orchestra.<br><br>Make sure to listen carefully and proceed as quickly and accurately as you can. You must answer within 4 seconds, or the next chords will play automatically.<br><br>When you\'re ready to begin, click continue.</p></div>',
+    choices: ['Continue']
 };
 
 timeline.push(instructions);
@@ -104,6 +104,14 @@ var survey2 = {
 
 timeline.push(survey1)
 timeline.push(survey2)
+
+let end_instructions = {
+    type: 'html-button-response',
+    stimulus: `<div class="gen_ins"><p>Thanks for your responses! After this page, you'll see a white screen while your data uploads. Please don't close out of this tab until you're redirected.<br><br></p></div>`,
+    choices: ['Continue']
+};
+
+timeline.push(end_instructions);
 
 jsPsych.init({
     preload_audio: preload_array, 
