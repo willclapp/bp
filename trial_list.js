@@ -119,7 +119,3 @@ for (let i = 0; i < exp_order.length; i++) {
         u++
     }
 }
-
-for (let i = 0; i < 4; i++) {
-    console.log(exp_trial_list[i])
-}

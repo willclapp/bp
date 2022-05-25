@@ -110,10 +110,10 @@ jsPsych.init({
     timeline: timeline,
     show_progress_bar: true,
     auto_update_progress_bar: true,
-    // on_finish: function(data) {
-    //     proliferate.submit({"trials": data.values()});
-    //   }
-    on_finish: function () {
-        jsPsych.data.displayData('csv');
-    }
+    on_finish: function(data) {
+        proliferate.submit({"trials": data.values()});
+      }
+    // on_finish: function () {
+    //     jsPsych.data.displayData('csv');
+    // }
 });
